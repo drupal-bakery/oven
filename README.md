@@ -20,7 +20,7 @@ Similarly, if you'd like to append a file, append "append___" to your file name.
 Commands
 --------
 
-#Initialization
+### Initialization
 Kickstarts this repo and generates all that is needed to run Drupal, and installs drush commands for development.
 
 `php -f start.php`
@@ -34,7 +34,7 @@ Kickstarts this repo and generates all that is needed to run Drupal, and install
 - Move the downloaded Drush modules to the `~/.drush` folder (or M$ equivalent)
 - Run `drush bake`
 
-#To Build Drupal
+### To Build Drupal
 After running build.php once, this is the command you would typically run to bake (or re-bake) your Drupal.
 
 `drush bake`
@@ -44,7 +44,7 @@ After running build.php once, this is the command you would typically run to bak
 - Runs `drush make ...` on drupal-org-stub.make
 - Runs `drush bake-manifest`
 
-#To start Development
+### To start Development
 When you about to start coding, run this. Keep it running.
 
 `drush bake-dev`
@@ -55,7 +55,7 @@ When you about to start coding, run this. Keep it running.
 - Runs `drush bake-compass` (When file change of an applicable kind is found).
 - Runs `drush bake-profile` (When file change of an applicable kind is found).
 
-#Extra Development Tools
+### Extra Development Tools
 These tools are all included in `bake-dev` but they can be executed independently.
 
 `drush bake-compass`
@@ -81,7 +81,7 @@ These tools are all included in `bake-dev` but they can be executed independentl
 -- Other - Move it to /custom, and symlink it into /drupal
 - Runs `drush bake manifest`
 
-#Onboarding
+### Onboarding
 Here are some things you can use to convert a traditional Drupal installation into a Bakery project.
 
 `drush bake-generate`
@@ -94,7 +94,7 @@ Here are some things you can use to convert a traditional Drupal installation in
 - Uses Profiler additions, to chain/merge installation profiles.
 - Possibly uses (Drush Remake) to make profile files based on enabled/included modules.
 
-#Distribution
+### Distribution
 Tools for sending out your Bakery project into the world.
 
 `drush bake-dist`
