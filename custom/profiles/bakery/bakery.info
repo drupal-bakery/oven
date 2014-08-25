@@ -34,6 +34,7 @@ dependencies[] = queue_ui
 dependencies[] = elysia_cron
 dependencies[] = features
 dependencies[] = feed_import
+dependencies[] = ctools
 
 ; Custom modules
 dependencies[] = bakery_importer

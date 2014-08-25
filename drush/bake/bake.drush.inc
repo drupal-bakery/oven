@@ -58,18 +58,18 @@ function drush_bake() {
     '--working-copy'
   ));
 
+  // Manifest here
+
+  // Recursive copy here
+  _bake_recursive_copy($start_dir . '/custom', $tmpdir);
+
+  // Move into place
   if (is_dir($tmpdir)) {
     if (is_dir($destination)) {
       drush_delete_dir($destination);
     }
     drush_copy_dir($tmpdir, $destination);
   }
-
-  // Manifest here
-
-  // Recursive copy here
-
-  _bake_recursive_copy('custom', 'drupal');
 }
 
 

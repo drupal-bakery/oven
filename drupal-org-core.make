@@ -25,3 +25,12 @@ projects[drupal][version] = 7.31
 ; projects[drupal][patch][1369024] = http://drupal.org/files/1369024-theme-inc-add-messages-id-make-D7.patch
 ; projects[drupal][patch][1369584] = http://drupal.org/files/1369584-form-error-link-from-message-to-element-D7.patch
 ; projects[drupal][patch][1697570] = http://drupal.org/files/drupal7.menu-system.1697570-29.patch
+
+
+; --------
+; Profiler
+;
+; We are installing profiler above the profile level because we are assuming that one or more profiles will likely need it.
+
+projects[profiler][version] = 2.0-beta2
+projects[profiler][type] = module

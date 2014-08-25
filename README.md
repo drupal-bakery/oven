@@ -23,7 +23,7 @@ Commands
 ### Initialization
 Kickstarts this repo and generates all that is needed to run Drupal, and installs drush commands for development.
 
-`php -f start.php`
+`php -f build.php`
 
 - Use Composer to install:
 -- Drupal Bakery - Drush (this repository). Which requires:
@@ -115,7 +115,6 @@ Before request on cron:
 - Ensure we have 10 quickstarts of drupal-bakery in Pagodabox.
 -- If we are short, deploy a quickstart
 -- connect it with an entity in a queue.
-
 - Determine the oldest quickstart in the queue.
 - add user as collaborator (NO API FOR THIS CURRENTLY)
 -- Check for an error here. If so, go no further.
@@ -133,6 +132,10 @@ Composer
     https://www.drupal.org/project/composer
     A dependency for modules that need composer.
 
+Drupal.org Drush
+    https://www.drupal.org/project/drupalorg_drush
+    Extends drush for validating distributions.
+
 Drush Remake
     https://www.drupal.org/project/drush_remake
     Remakes your installation profiles.
@@ -148,6 +151,11 @@ Profiler
 
 Related Projects
 ----------------
+
+Profiler Builder
+    https://www.drupal.org/project/profiler_builder
+    Automatically generates profiles from existing sites. Useful for onboarding.
+    To use, this must be installed into the site being onboarded.
 
 Drush Rebuild
     https://www.drupal.org/project/rebuild
