@@ -5,7 +5,7 @@ version = 7.x-1.0
 core = 7.x
 
 ; Use translation installation as the base profile
-base = l10n_install
+; base = l10n_install
 
 ; Standard modules
 dependencies[] = block
