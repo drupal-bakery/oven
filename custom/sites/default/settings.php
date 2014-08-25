@@ -265,7 +265,8 @@ $update_free_access = FALSE;
 /**
  * For better security, set this environment variable after your initial deployment to another random string.
  */
-$drupal_hash_salt = getenv('DRUPAL_HASH_SALT', 'dOd7lOtKkuW9QZKnCu7qTOoI5_PTyEjEHXDn7ceLqmQ');
+
+$drupal_hash_salt = getenv('DRUPAL_HASH_SALT') ? getenv('DRUPAL_HASH_SALT') : '';
 
 /**
  * Base URL (optional).
