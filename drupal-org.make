@@ -42,9 +42,9 @@ projects[elysia_cron][subdir] = contrib
 ; THINGS NOT IN USE AT THIS TIME
 
 ; Features will likely be handy for saving/reverting configuration later
-; projects[features][version] = 2.2
-; projects[features][type] = module
-; projects[features][subdir] = contrib
+projects[features][version] = 2.2
+projects[features][type] = module
+projects[features][subdir] = contrib
 
 ; Feeds Import to import Projects from Drupal.org
 projects[feed_import][version] = 3.3
