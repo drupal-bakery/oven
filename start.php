@@ -91,8 +91,8 @@ if ($composer_installed) {
       }
       rcopy($source, $destination);
 
-      bake_exec('drush cc drush');
-      bake_exec('drush bake');
+      bake_exec('./vendor/bin/drush cc drush');
+      bake_exec('./vendor/bin/drush bake');
     }
     else {
       bake_error('Could not install local Composer dependencies.');

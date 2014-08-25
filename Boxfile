@@ -46,5 +46,5 @@ database1:
   topology: single
 
 storage1:
-  name: filestore
+  name: files
   type: nfs
