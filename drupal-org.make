@@ -9,7 +9,6 @@
 api = 2
 core = 7.x
 
-projects[l10n_install][type] = core
 
 ; --------
 ; Modules

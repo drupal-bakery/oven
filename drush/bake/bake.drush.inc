@@ -11,8 +11,7 @@ function bake_drush_command() {
   // The 'merge' command
   $items['bake'] = array(
     'description' => "Runs drush make to generate a new drupal folder, including profile and manifest.",
-    'options' => array(
-    ),
+    'options' => array(),
     'examples' => array(
       'drush bake' => 'Generates /drupal folder.',
     ),
@@ -43,8 +42,13 @@ function bake_drush_help($section) {
  */
 function drush_bake() {
 
+  $base_path = drush_get_context('DRUSH_DRUPAL_ROOT');
+  $start_dir = realpath($base_path . '/../');
+  if (getcwd() !== $start_dir) {
+    chdir($start_dir);
+  }
   $destination = getcwd() . '/drupal';
-  $tmpdir = drush_tempdir() .'/drupal';
+  $tmpdir = drush_tempdir() . '/drupal';
 
   drush_print('Building Drupal core from drupal-org-core.make');
   drush_invoke('make', array(
@@ -55,7 +59,7 @@ function drush_bake() {
   ));
 
   if (is_dir($tmpdir)) {
-    if (is_dir($destination)){
+    if (is_dir($destination)) {
       drush_delete_dir($destination);
     }
     drush_copy_dir($tmpdir, $destination);
