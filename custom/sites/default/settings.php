@@ -229,7 +229,7 @@ if (getenv('PLATFORM') == 'PAGODABOX') {
       )
     )
   );
-}
+}  
 
 /**
  * Access control for update.php script.
