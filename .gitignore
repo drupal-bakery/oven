@@ -1,0 +1,31 @@
+# git@github.com:drupal-bakery/oven.git
+
+# Exclude manifest files
+manifest.json
+
+# Exclude drupal
+drupal
+
+# Exclude Composer /vendor folder
+vendor
+
+# Exclude distribution (not for future projects)
+bake-dist.zip
+
+# Exclude node modules for gulp
+node_modules
+
+# Exclude any extracted distribution
+bake-dist
+
+# Exclude broken builds
+drupal_new
+drupal_old
+
+# Exclude PHPStorm projects
+.idea
+
+# Exclude third-party drush
+drush/drupalorg_drush
+drush/drush_remake
+drush/makefile_extra

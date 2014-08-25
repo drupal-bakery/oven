@@ -1,0 +1,9 @@
+*.svn*
+*.git*
+*.idea*
+*.drush*
+*.DS_Store*
+/drupal/sites/default/files/*
+/drupal/sites/default/private/*
+/bake-dist/*
+bake-exclude.lst
