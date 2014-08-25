@@ -35,7 +35,6 @@ web1:
       - opcache
   network_dirs:
     storage1:
-      - drupal/sites/default/settings.php
       - drupal/sites/default/files
       - drupal/sites/default/private
   env:
