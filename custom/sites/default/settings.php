@@ -580,5 +580,5 @@ $conf['allow_authorize_operations'] = FALSE;
  * Composer Manager Settings.
  * This should be appended to every settings.php file
  */
-$conf['composer_manager_vendor_dir'] = './vendor';
-$conf['composer_manager_file_dir'] = './';
+$conf['composer_manager_vendor_dir'] = '../vendor';
+$conf['composer_manager_file_dir'] = '../';
