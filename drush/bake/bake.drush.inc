@@ -60,4 +60,36 @@ function drush_bake() {
     }
     drush_copy_dir($tmpdir, $destination);
   }
+
+  // Manifest here
+
+  // Recursive copy here
+
+  _bake_recursive_copy('custom', 'drupal');
+}
+
+
+/**
+ * Recursively copy a directory, or file
+ *
+ * @param $source
+ * @param $destination
+ */
+function _bake_recursive_copy($source, $destination) {
+  if (is_dir($source)) {
+    // Ensure the destination folder exists before we begin
+    drush_mkdir($destination, TRUE);
+
+    // Recursively copy folders
+    drush_copy_dir($source, $destination, FILE_EXISTS_MERGE);
+  }
+  elseif (is_file($source)) {
+    // Same as above, but for the path to this file
+    $segments = explode('/', $destination);
+    array_pop($segments);
+    drush_mkdir(implode('/', $segments), TRUE);
+
+    // Copy the file
+    copy($source, $destination);
+  }
 }
