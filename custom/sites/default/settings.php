@@ -215,7 +215,7 @@
  * If we detect that we have been deployed to PagodaBox,
  * use the default database credentials given by that environment.
  */
-if (getenv('PLATFORM') == 'PAGODABOX'){
+if (getenv('PLATFORM') == 'PAGODABOX') {
   $databases = array(
     'default' => array(
       'default' => array(

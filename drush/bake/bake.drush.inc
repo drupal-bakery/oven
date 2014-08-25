@@ -44,7 +44,7 @@ function drush_bake() {
 
   $base_path = drush_get_context('DRUSH_DRUPAL_ROOT');
   $start_dir = realpath($base_path . '/../');
-  if (getcwd() !== $start_dir) {
+  if (is_dir($start_dir) && getcwd() !== $start_dir) {
     chdir($start_dir);
   }
   $destination = getcwd() . '/drupal';
