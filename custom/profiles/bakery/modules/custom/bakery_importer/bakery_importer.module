@@ -1,2 +1,45 @@
 <?php
 
+function bakery_init() {
+  return;
+  // WIP, just want to test some theories here...
+  $original_url = 'https://www.drupal.org/api-d7/node.json?type=project_module';
+  $options = array();
+  $request = drupal_http_request($original_url, $options);
+  if ($request->code == 200){
+    $object = json_decode($request->data);
+    if ($object){
+      foreach ($object->list as $project){
+
+        $node = new stdClass();
+        $node->type = 'project';
+        node_object_prepare($node);
+
+        $node->nid = $project->nid;
+        $node->vid = $project->vid;
+        $node->uid = 1;
+        $node->promote = 0;
+        $node->language = LANGUAGE_NONE;
+        $node->status = $project->status; // 1
+        $node->created = $project->created; // 1064767440
+        $node->changed = $project->changed; // 1367487227
+        $node->title = $project->title; // Annotation
+        $node->field_body = array(
+          LANGUAGE_NONE => array(
+            0 => array(
+              'value' => $project->body->value // <p>Allows user...
+            )
+          )
+        );
+        // $node->field_body = $project->body->value; // <p>Allows user...
+        $node->field_type = $project->field_project_type; // full
+        $node->field_subtype = $project->type; // project_module
+        $node->field_url = $project->url; // https://www.drupal.org/project/annotation
+        $node->field_machine_name = $project->field_project_machine_name; // annotation
+
+        $node = node_submit($node);
+        node_save($node);
+      }
+    }
+  }
+}

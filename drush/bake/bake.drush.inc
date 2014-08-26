@@ -60,8 +60,8 @@ function drush_bake() {
 
   // Manifest here
 
-  // Recursive copy here
-  _bake_recursive_copy($start_dir . '/custom', $tmpdir);
+  // Recursive copy custom files into place
+  _bake_recursive_copy(getcwd() . '/custom', $tmpdir);
 
   // Move into place
   if (is_dir($tmpdir)) {

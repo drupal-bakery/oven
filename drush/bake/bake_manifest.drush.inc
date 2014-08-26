@@ -121,7 +121,6 @@ function drush_bake_manifest_sync($crc_check = TRUE){
     die(print_r($paths));
   }
 
-
 }
 
 /**

@@ -29,3 +29,6 @@ drupal_old
 drush/drupalorg_drush
 drush/drush_remake
 drush/makefile_extra
+
+# Custom clean build install
+build-clean.sh

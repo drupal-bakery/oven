@@ -9,6 +9,13 @@
 api = 2
 core = 7.x
 
+; --------
+; Profiler
+;
+; We are installing profiler above the profile level because we are assuming that one or more profiles will likely need it.
+
+projects[profiler][version] = 2.0-beta2
+projects[profiler][type] = library
 
 ; --------
 ; Modules
@@ -29,12 +36,10 @@ projects[views_isotope][type] = module
 projects[queue_ui][version] = 2.0-rc1
 projects[queue_ui][type] = module
 
-; Elysia Cron, for recieving and firing off workers from the queue
+; Elysia Cron, for receiving and firing off workers from the queue
 ; and thus building drupal gzips with drush.
 projects[elysia_cron][version] = 2.1
 projects[elysia_cron][type] = module
-
-; THINGS NOT IN USE AT THIS TIME
 
 ; Features will likely be handy for saving/reverting configuration later
 projects[features][version] = 2.2
@@ -44,9 +49,21 @@ projects[features][type] = module
 projects[feed_import][version] = 3.3
 projects[feed_import][type] = module
 
+; Ctools required for views
 projects[ctools][version] = 1.4
 projects[ctools][type] = module
 
+; Entity Form for collecting user data (vs webform)
+projects[entityform][version] = 2.x-dev
+projects[entityform][type] = module
+
+; Strongarm for setting configuration by Features
+projects[strongarm][version] = 2.0
+projects[strongarm][type] = module
+
+; Entity API required by entityform
+projects[entity][version] = 1.5
+projects[entity][type] = module
 
 ; Themes
 ; --------
@@ -55,6 +72,14 @@ projects[ctools][type] = module
 projects[bootstrap][version] = 3.0
 projects[bootstrap][type] = theme
 
+projects[adminimal_theme][version] = 1.17
+projects[adminimal_theme][type] = theme
+
+projects[adminimal_admin_menu][version] = 1.5
+projects[adminimal_admin_menu][type] = module
+
+projects[admin_menu][version] = 3.0-rc4
+projects[admin_menu][type] = module
 
 ; Libraries
 ; ---------

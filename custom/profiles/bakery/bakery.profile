@@ -1,3 +1,4 @@
 <?php
 
-// This file must exist for this profile to be considered for installation.
+// !function_exists('profiler_v2') ? require_once('libraries/profiler/profiler.inc') : FALSE;
+// profiler_v2('bakery');
